@@ -56,4 +56,11 @@ abstract class BaseController extends Controller
 
         $this->session = \Config\Services::session();
     }
+    function page_construct($page, $meta = array(), $data = array())
+    {
+        return view ('layout/header').
+            view ('layout/sidebar').
+            view ($page).
+            view('layout/footer');
+    }
 }

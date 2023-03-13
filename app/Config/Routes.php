@@ -35,6 +35,7 @@ $routes->add('forgot_password', 'ForgotPassword::index');
 
 $routes->group('dashboard', static function ($routes) {
     $routes->get('/', 'Dashboard\Home::index');
+    $routes->get('user', 'Dashboard\User::index');
 });
 
 /*
